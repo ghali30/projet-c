@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1737286144 source:c:\users\pcpack\onedrive\bureau\liar's bar\projet c\voitures\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Voitures.h"
+
+1737286144 c:\users\pcpack\onedrive\bureau\liar's bar\projet c\voitures\voitures.h
+
+1737286504 source:c:\users\pcpack\onedrive\bureau\liar's bar\projet c\voitures\voitures.c
+	"Voitures.h"
+	<stdio.h>
+	<stdlib.h>
+
