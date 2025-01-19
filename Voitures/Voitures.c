@@ -130,7 +130,7 @@ void Modifier(){
 
     voiture V;
     int found = 0;
-while (fscanf(f, " %[^;];%ld;%[^;];%[^;];%d;%d;%d;%f;%d\n",V.nom_utilisateur, &V.id, V.marque, V.model,&V.ca, &V.nbr_place, &V.tr, &V.prix_j, &V.di) != EOF) {
+while (fscanf(f, " %[^;];%ld;%[^;];%[^;];%d;%d;%d;%f;%d\n",V.nom_utilisateur, &V.id, V.marque, V.model,&V.ca, &V.nbr_place, &V.tr, &V.prix_j, &V.di) ==9 ){
         if (V.id == ID) {
             found = 1;
             printf("Entrez les nouvelles informations :\n");
@@ -141,10 +141,10 @@ while (fscanf(f, " %[^;];%ld;%[^;];%[^;];%d;%d;%d;%f;%d\n",V.nom_utilisateur, &V
             printf("Marque : ");
             scanf(" %[^\n]", V.marque);
 
-            printf("Modèle : ");
+            printf("ModÃ¨le : ");
             scanf(" %[^\n]", V.model);
 
-            printf("Type de carburant (0: essence, 1: diesel, 2: hybride, 3: électrique) : ");
+            printf("Type de carburant (0: essence, 1: diesel, 2: hybride, 3: Ã©lectrique) : ");
             scanf("%d", &V.ca);
 
             printf("Nombre de places : ");
@@ -174,7 +174,8 @@ while (fscanf(f, " %[^;];%ld;%[^;];%[^;];%d;%d;%d;%f;%d\n",V.nom_utilisateur, &V
         printf("Voiture introuvable.\n");
     }
     int a;
- printf(" \033[30;47mPour reessayer appuyez sur (0), pour effectuer une autre operation appuyez sur (1), pour quitter appuyez sur (2) : \033[0m");    scanf("%d",&a);
+ printf(" \033[30;47mPour reessayer appuyez sur (0), pour effectuer une autre operation appuyez sur (1), pour quitter appuyez sur (2) : \033[0m");    
+        scanf("%d",&a);
         if(a==0){
             Modifier();
         }else if(a==1){
@@ -216,7 +217,7 @@ void Supprimer() {
         voiture v;
         int found = 0;
 
-        while (fscanf(f, " %[^;];%ld;%[^;];%[^;];%d;%d;%d;%f;%d\n",v.nom_utilisateur,&v.id,v.marque,v.model,&v.ca,&v.nbr_place,&v.tr,&v.prix_j,&v.di)!=EOF) {
+        while (fscanf(f, " %[^;];%ld;%[^;];%[^;];%d;%d;%d;%f;%d\n",v.nom_utilisateur,&v.id,v.marque,v.model,&v.ca,&v.nbr_place,&v.tr,&v.prix_j,&v.di) == 9) {
             if (v.id == ID) {
                 found = 1;
                 printf("\nVoiture avec ID %ld supprime avec succes.\n",ID);
@@ -233,11 +234,12 @@ void Supprimer() {
             rename("temp.csv", "Data.csv");
         } else {
             remove("temp.csv");
-            printf("Voiture avec ID %ld non trouvée.\n", ID);
+            printf("Voiture avec ID %ld non trouvÃ©e.\n", ID);
         }
 
         int a;
- printf(" \033[30;47mPour reessayer appuyez sur (0), pour effectuer une autre operation appuyez sur (1), pour quitter appuyez sur (2) : \033[0m");    scanf("%d",&a);
+ printf(" \033[30;47mPour reessayer appuyez sur (0), pour effectuer une autre operation appuyez sur (1), pour quitter appuyez sur (2) : \033[0m");    
+        scanf("%d",&a);
         if(a==0){
             Supprimer();
         }else if(a==1){
@@ -274,7 +276,7 @@ void Afficher() {
             voiture V;
             int i=1;
              printf("La liste des voitures disponibles : \n\n");
-      while (fscanf(f1, " %[^;];%ld;%[^;];%[^;];%d;%d;%d;%f;%d\n",V.nom_utilisateur,&V.id,V.marque,V.model,&V.ca,&V.nbr_place,&V.tr,&V.prix_j,&V.di)!=EOF){
+      while (fscanf(f1, " %[^;];%ld;%[^;];%[^;];%d;%d;%d;%f;%d\n",V.nom_utilisateur,&V.id,V.marque,V.model,&V.ca,&V.nbr_place,&V.tr,&V.prix_j,&V.di) == 9){
             if(V.di == 1){
                 printf("\033[1;34mVOITURE      %d    :\033[0m \n",i);
 
@@ -301,7 +303,8 @@ void Afficher() {
     }
     }fclose(f1);
     int a;
- printf(" \033[30;47mPour reessayer appuyez sur (0), pour effectuer une autre operation appuyez sur (1), pour quitter appuyez sur (2) : \033[0m");    scanf("%d",&a);
+ printf(" \033[30;47mPour reessayer appuyez sur (0), pour effectuer une autre operation appuyez sur (1), pour quitter appuyez sur (2) : \033[0m");    
+        scanf("%d",&a);
         if(a==0){
             Afficher();
         }else if(a==1){
@@ -348,7 +351,7 @@ void Rechercher() {
             printf("Entrez l'ID de la voiture a rechercher : ");
             scanf("%ld",&id);
 
-            while (fscanf(f, " %[^;];%ld;%[^;];%[^;];%d;%d;%d;%f;%d\n",v.nom_utilisateur,&v.id,v.marque,v.model,&v.ca,&v.nbr_place,&v.tr,&v.prix_j,&v.di)!=EOF){
+            while (fscanf(f, " %[^;];%ld;%[^;];%[^;];%d;%d;%d;%f;%d\n",v.nom_utilisateur,&v.id,v.marque,v.model,&v.ca,&v.nbr_place,&v.tr,&v.prix_j,&v.di) == 9){
                 if (v.id == id){
                 printf("=======================================\n");
                 printf("Le nom de l'utilisateur est : %s \n",v.nom_utilisateur);
@@ -388,7 +391,7 @@ void Rechercher() {
             scanf("%s",m);
             rewind(stdin);
 
-            while (fscanf(f, " %[^;];%ld;%[^;];%[^;];%d;%d;%d;%f;%d\n",v.nom_utilisateur,&v.id,v.marque,v.model,&v.ca,&v.nbr_place,&v.tr,&v.prix_j,&v.di)!=EOF){
+            while (fscanf(f, " %[^;];%ld;%[^;];%[^;];%d;%d;%d;%f;%d\n",v.nom_utilisateur,&v.id,v.marque,v.model,&v.ca,&v.nbr_place,&v.tr,&v.prix_j,&v.di) == 9){
                 if (strcmp(v.marque,m)==0){
                 printf("=======================================\n");
                 printf("Le nom de l'utilisateur est : %s \n",v.nom_utilisateur);
@@ -466,7 +469,7 @@ void Trier_prix(){
         voiture temp;
         int cmp=0,i,j;
 
-while (fscanf(f, " %[^;];%ld;%[^;];%[^;];%d;%d;%d;%f;%d\n",v[cmp].nom_utilisateur,&v[cmp].id,v[cmp].marque,v[cmp].model,&v[cmp].ca,&v[cmp].nbr_place,&v[cmp].tr,&v[cmp].prix_j,&v[cmp].di)!=EOF){
+while (fscanf(f, " %[^;];%ld;%[^;];%[^;];%d;%d;%d;%f;%d\n",v[cmp].nom_utilisateur,&v[cmp].id,v[cmp].marque,v[cmp].model,&v[cmp].ca,&v[cmp].nbr_place,&v[cmp].tr,&v[cmp].prix_j,&v[cmp].di) == 9){
             cmp++;
         }
         fclose(f);
@@ -511,7 +514,8 @@ while (fscanf(f, " %[^;];%ld;%[^;];%[^;];%d;%d;%d;%f;%d\n",v[cmp].nom_utilisateu
         }
 
         int a;
- printf(" \033[30;47m Pour reessayer appuyez sur (0), pour effectuer une autre operation appuyez sur (1), pour quitter appuyez sur (2) : \033[0m");        scanf("%d", &a);
+ printf(" \033[30;47m Pour reessayer appuyez sur (0), pour effectuer une autre operation appuyez sur (1), pour quitter appuyez sur (2) : \033[0m");        
+        scanf("%d", &a);
         if (a == 0) {
             Trier_prix();
         } else if (a == 1) {
@@ -539,7 +543,7 @@ void Trier_marque(){
     else {
         FILE *f = fopen("Data.csv", "r");
         if (f == NULL) {
-            printf("Erreur lors de l'ouverture du fichier.\n");
+            printf("Erreur.\n");
             exit(1);
         }
 
@@ -547,7 +551,7 @@ void Trier_marque(){
         voiture temp ;
         int cmp=0;
 
-        while (fscanf(f, " %[^;];%ld;%[^;];%[^;];%d;%d;%d;%f;%d\n",v[cmp].nom_utilisateur,&v[cmp].id,v[cmp].marque,v[cmp].model,&v[cmp].ca,&v[cmp].nbr_place,&v[cmp].tr,&v[cmp].prix_j,&v[cmp].di)!=EOF){
+        while (fscanf(f, " %[^;];%ld;%[^;];%[^;];%d;%d;%d;%f;%d\n",v[cmp].nom_utilisateur,&v[cmp].id,v[cmp].marque,v[cmp].model,&v[cmp].ca,&v[cmp].nbr_place,&v[cmp].tr,&v[cmp].prix_j,&v[cmp].di) == 9){
             cmp++;
         }
         fclose(f);
@@ -590,7 +594,8 @@ void Trier_marque(){
         }
 
         int a;
- printf(" \033[30;47m Pour reessayer appuyez sur (0), pour effectuer une autre operation appuyez sur (1), pour quitter appuyez sur (2) : \033[0m");        scanf("%d", &a);
+ printf(" \033[30;47m Pour reessayer appuyez sur (0), pour effectuer une autre operation appuyez sur (1), pour quitter appuyez sur (2) : \033[0m");        
+        scanf("%d", &a);
         if (a == 0) {
             Trier_marque();
         } else if (a == 1) {
