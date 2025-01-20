@@ -42,7 +42,7 @@ void afficherMD() {
 void Ajouter() {
      char c[10];
      int a,b;
-     printf("\n\033[30;47mVous avez choisi l'option 3 : ^^ Ajouter une voiture ^^.\033[0m\n");
+     printf("\n\033[30;47mVous avez choisi l'option 7 : ^^ Ajouter une voiture ^^.\033[0m\n");
    printf("\033[30;47mEnter ^ menu ^ pour aller vers le menu principale (autre pour continuer):\033[0m");
      scanf("%s",c);
     if(strcmp(c,"menu")==0){
@@ -106,7 +106,7 @@ void Ajouter() {
 void Modifier(){
      char c[10];
      int i=1;
-  printf("\n\033[30;47mVous avez choisi l'option 3 : ^^ Modifier une voiture ^^.\033[0m\n");
+  printf("\n\033[30;47mVous avez choisi l'option 5 : ^^ Modifier une voiture ^^.\033[0m\n");
    printf("\033[30;47mEnter ^ menu ^ pour aller vers le menu principale (autre pour continuer):\033[0m");
    scanf("%s",c);
     if(strcmp(c,"menu")==0){
@@ -193,7 +193,7 @@ while (fscanf(f, " %[^;];%ld;%[^;];%[^;];%d;%d;%d;%f;%d\n",V.nom_utilisateur, &V
 
 void Supprimer() {
     char c[10];
-   printf("\n\033[30;47mVous avez choisi l'option 3 : ^^ Supprimer une voiture ^^.\033[0m\n");
+   printf("\n\033[30;47mVous avez choisi l'option 6 : ^^ Supprimer une voiture ^^.\033[0m\n");
    printf("\033[30;47mEnter ^ menu ^ pour aller vers le menu principale (autre pour continuer):\033[0m");
     scanf("%s", c);
 
@@ -258,7 +258,7 @@ void Supprimer() {
 void Afficher() {
        char c[10];
 
-   printf("\n\033[30;47mVous avez choisi l'option 3 : ^^ Afficher les voitures ^^.\033[0m\n");
+   printf("\n\033[30;47mVous avez choisi l'option 1 : ^^ Afficher les voitures ^^.\033[0m\n");
    printf("\033[30;47mEnter ^ menu ^ pour aller vers le menu principale (autre pour continuer):\033[0m");
    scanf("%s",c);
     if(strcmp(c,"menu")==0){
@@ -320,7 +320,7 @@ void Afficher() {
 }
 void Rechercher() {
        char c[10];
-   printf("\n\033[30;47mVous avez choisi l'option 3 : ^^ Rechercher une voiture ^^.\033[0m\n");
+   printf("\n\033[30;47mVous avez choisi l'option 2 : ^^ Rechercher une voiture ^^.\033[0m\n");
    printf("\033[30;47mEnter ^ menu ^ pour aller vers le menu principale (autre pour continuer):\033[0m");
    scanf("%s",c);
     if(strcmp(c,"menu")==0){
@@ -531,7 +531,7 @@ while (fscanf(f, " %[^;];%ld;%[^;];%[^;];%d;%d;%d;%f;%d\n",v[cmp].nom_utilisateu
 }
 void Trier_marque(){
           char c[10];
-   printf("\n\033[30;47mVous avez choisi l'option 3 : ^^ Trier par marque ^^.\033[0m\n");
+   printf("\n\033[30;47mVous avez choisi l'option 4 : ^^ Trier par marque ^^.\033[0m\n");
    printf("\033[30;47mEnter ^ menu ^ pour aller vers le menu principale (autre pour continuer):\033[0m");
    scanf("%s",c);
     if(strcmp(c,"menu")==0){
