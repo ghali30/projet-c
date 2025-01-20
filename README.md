@@ -5,4 +5,4 @@ Majd Rahoumi
 Amine Bourahla
 Houssam Braitit
 Yassin ait alaya
-Adam Mourad
+Adam Morad
